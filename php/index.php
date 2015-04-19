@@ -3,7 +3,7 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Team Orlando</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css"/>
 </head>
 <body>
 <div id="container">
@@ -11,7 +11,7 @@
         <div id="logo"><img src="#" alt="logo"></div>
         <h1>Електроника за всеки любител</h1>
         <nav id="main-nav">
-            <a href="#">Начало</a>
+            <a class="table" href="#">Начало</a>
             <a href="#">Каталог</a>
             <a href="#">Форум</a>
             <a href="#">Контакти</a>
