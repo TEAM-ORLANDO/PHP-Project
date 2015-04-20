@@ -48,23 +48,23 @@
         <nav>
             <h3>Каталог</h3>
             <ul>
-                <li><a href="#">Полупроводници</a></li>
-                <li><a href="#">Оптоелектроника</a></li>
-                <li><a href="#">Пасивни елементи</a></li>
-                <li><a href="#">Конектори</a></li>
-                <li><a href="#">Предпазители</a></li>
-                <li><a href="#">Превключватели</a></li>
-                <li><a href="#">Източници на звук</a></li>
-                <li><a href="#">Релета</a></li>
-                <li><a href="#">Трансформатори</a></li>
-                <li><a href="#">Охлаждане, отопление</a></li>
-                <li><a href="#">Проводници</a></li>
-                <li><a href="#">Механични елементи</a></li>
-                <li><a href="#">Кутии</a></li>
-                <li><a href="#">Автоматика</a></li>
-                <li><a href="#">Оборудване</a></li>
-                <li><a href="#">Роботика</a></li>
-                <li><a href="#">Други</a></li>
+                <li id="category1"><a href="#">Полупроводници</a></li>
+                <li id="category2"><a href="#">Оптоелектроника</a></li>
+                <li id="category3"><a href="#">Пасивни елементи</a></li>
+                <li id="category4"><a href="#">Конектори</a></li>
+                <li id="category5"><a href="#">Предпазители</a></li>
+                <li id="category6"><a href="#">Превключватели</a></li>
+                <li id="category7"><a href="#">Източници на звук</a></li>
+                <li id="category8"><a href="#" >Релета</a></li>
+                <li id="category9"><a href="#">Трансформатори</a></li>
+                <li id="category10"><a href="#">Охлаждане, отопление</a></li>
+                <li id="category11"><a href="#">Проводници</a></li>
+                <li id="category12"><a href="#">Механични елементи</a></li>
+                <li id="category13"><a href="#">Кутии</a></li>
+                <li id="category14"><a href="#">Автоматика</a></li>
+                <li id="category15"><a href="#">Оборудване</a></li>
+                <li id="category16"><a href="#">Роботика</a></li>
+                <li id="category17"><a href="#">Други</a></li>
                 <li><img src="aside.jpg" alt="aside" width="160"/></li>
             </ul>
 

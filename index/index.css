@@ -27,7 +27,7 @@ header > form > .divLabel {
     margin-bottom: 3px;
 }
 header > form > div > label {
-    font-size: 12px;
+    font-size: 14px;
 }
 
 header > form > .divLabel > div > #username,
@@ -44,7 +44,9 @@ header > form > div > input[type='submit'] {
 }
 
 header > form > div > input[type='submit']:hover {
-    background-color: lightgray;
+    background-color: #99CCFF;
+    cursor: pointer;
+    transition: 1s;
 }
 header > #logo {
     float: left;
@@ -70,10 +72,12 @@ header > nav > a {
     margin-left: 10px;
     padding: 5px;
     border: 1px solid lightgray;
-    border-radius: 5px 0 5px 0;
+    border-radius: 10px 0 10px 0;
 }
 header > nav > a:hover {
-    background-color: lightgray;
+    background-color: #99CCFF;
+    opacity: 1;
+    transition: 1s;
 
 }
 aside {
@@ -105,17 +109,154 @@ aside > nav > ul {
 aside > nav > ul > li > a {
     padding: 0 5px;
 }
-aside > nav > ul > li > a:hover {
-    background-color: lightgray;
-    border-radius: 5px 0 5px 0;
+aside > nav > ul > li {
+    cursor: pointer;
 }
+
+aside > nav > ul > #category1 {
+    border-left: 5px solid palevioletred;
+}
+aside > nav > ul > #category1:hover {
+    background-color: palevioletred;
+    border-radius: 10px 0 10px 0;
+    transition: 1s;
+}
+aside > nav > ul > #category2 {
+    border-left: 5px solid #ffff00;
+}
+aside > nav > ul > #category2:hover {
+    background-color: #ffff00;
+    border-radius: 10px 0 10px 0;
+    transition: 1s;
+}
+aside > nav > ul > #category3 {
+    border-left: 5px solid lightgreen;
+}
+aside > nav > ul > #category3:hover {
+    background-color: lightgreen;
+    border-radius: 10px 0 10px 0;
+    transition: 1s;
+}
+aside > nav > ul > #category4 {
+    border-left: 5px solid lightskyblue;
+}
+aside > nav > ul > #category4:hover {
+    background-color: lightskyblue;
+    border-radius: 10px 0 10px 0;
+    transition: 1s;
+}
+aside > nav > ul > #category5 {
+    border-left: 5px solid orange;
+}
+aside > nav > ul > #category5:hover {
+    background-color: orange;
+    border-radius: 10px 0 10px 0;
+    transition: 1s;
+}
+aside > nav > ul > #category6 {
+    border-left: 5px solid #c0c0c0;
+}
+aside > nav > ul > #category6:hover {
+    background-color: #c0c0c0;
+    border-radius: 10px 0 10px 0;
+    transition: 1s;
+}
+aside > nav > ul > #category7 {
+    border-left: 5px solid lightgreen;
+}
+aside > nav > ul > #category7:hover {
+    background-color: lightgreen;
+    border-radius: 10px 0 10px 0;
+    transition: 1s;
+}
+aside > nav > ul > #category8 {
+    border-left: 5px solid lightcyan;
+}
+aside > nav > ul > #category8:hover {
+    background-color: lightcyan;
+    border-radius: 10px 0 10px 0;
+    transition: 1s;
+}
+aside > nav > ul > #category9 {
+    border-left: 5px solid indianred;
+}
+aside > nav > ul > #category9:hover {
+    background-color: indianred;
+    border-radius: 10px 0 10px 0;
+    transition: 1s;
+}
+aside > nav > ul > #category10 {
+    border-left: 5px solid blueviolet;
+}
+aside > nav > ul > #category10:hover {
+    background-color: blueviolet;
+    border-radius: 10px 0 10px 0;
+    transition: 1s;
+}
+aside > nav > ul > #category11 {
+    border-left: 5px solid coral;
+}
+aside > nav > ul > #category11:hover {
+    background-color: coral;
+    border-radius: 10px 0 10px 0;;
+    transition: 1s;
+}
+aside > nav > ul > #category12 {
+    border-left: 5px solid indianred;
+}
+aside > nav > ul > #category12:hover {
+    background-color: indianred;
+    border-radius: 10px 0 10px 0;
+    transition: 1s;
+}
+aside > nav > ul > #category13 {
+    border-left: 5px solid greenyellow;
+}
+aside > nav > ul > #category13:hover {
+    background-color: greenyellow;
+    border-radius: 10px 0 10px 0;
+    transition: 1s;
+}
+aside > nav > ul > #category14 {
+    border-left: 5px solid royalblue;
+}
+aside > nav > ul > #category14:hover {
+    background-color: royalblue;
+    border-radius: 10px 0 10px 0;
+    transition: 1s;
+}
+aside > nav > ul > #category15 {
+    border-left: 5px solid darkgoldenrod;
+}
+aside > nav > ul > #category15:hover {
+    background-color: darkgoldenrod;
+    border-radius: 10px 0 10px 0;
+    transition: 1s;
+}
+aside > nav > ul > #category16 {
+    border-left: 5px solid saddlebrown;
+}
+aside > nav > ul > #category16:hover {
+    background-color: saddlebrown;
+    border-radius: 10px 0 10px 0;
+    transition: 1s;
+}
+aside > nav > ul > #category17 {
+    border-left: 5px solid gold;
+}
+aside > nav > ul > #category17:hover {
+    background-color: gold;
+    border-radius: 10px 0 10px 0;
+    transition: 1s;
+}
+
 aside > nav > ul > li > img {
     position: relative;
     top:115px;
     left: 22px;
 }
 main {
-    width: 920px;
+    width: 915px;
     float: right;
     border-top: 1px solid lightgray;
     margin-bottom: 10px;
@@ -142,6 +283,13 @@ footer {
 }
 
 footer > a {
- padding-left: 15px;
+    padding: 3px 5px;
+    margin-left: 15px;
+
+}
+footer > a:hover {
+    background-color: #99CCFF;
+    border-radius: 10px 0 10px 0;
+    transition: 1s;
 
 }
