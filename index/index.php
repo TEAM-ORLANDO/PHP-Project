@@ -2,39 +2,51 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Team Orlando</title>
+    <title>Електроника за всеки любител</title>
     <link rel="stylesheet" href="index.css"/>
 </head>
 <body>
 <div id="container">
     <header>
-        <div id="logo"><img src="#" alt="logo"></div>
-        <h1>Електроника за всеки любител</h1>
-        <nav id="main-nav">
-            <a class="table" href="#">Начало</a>
-            <a href="#">Каталог</a>
-            <a href="#">Форум</a>
-            <a href="#">Контакти</a>
-        </nav>
         <?php
         //logged in or not field
 
         echo "<form id='login' action='login.php' method='post' accept-charset='UTF-8'>
-            <label for='username'>Потребител:</label>
-            <input type='text' name='username' id='username' maxlength='50'/>
+            <div class='divLabel'>
+                <label for='username'>Потребител:</label>
+                    <div>
+                        <input type='text' name='username' id='username' maxlength='50'/>
+                    </div>
+            </div>
 
-            <label for='password'>Парола:</label>
-            <input type='password' name='password' id='password' maxlength='50'/>
-            <input type='submit' name='register' value='Регистрация'/>
-            <input type='submit' name='submit' value='Вход'/>
+            <div class='divLabel'>
+                <label for='password'>Парола:</label>
+                    <div>
+                        <input type='password' name='password' id='password' maxlength='50'/>
+                    </div>
+            </div>
+            <div class='divLabel'>
+                <input type='submit' name='register' value='Регистрация'/>
+            </div>
+            <div>
+                <input type='submit' name='submit' value='Вход'/>
+            </div>
+
         </form>";
 
         ?>
-
+        <div id="logo"><img src="logo.png" alt="logo" width="200px"></div>
+        <h1>Електроника за всеки любител</h1>
+        <nav id="main-nav">
+            <a href="#">Начало</a>
+            <a href="#">Каталог</a>
+            <a href="#">Контакти</a>
+        </nav>
     </header>
+
     <aside id="left-side">
         <nav>
-            <p>Каталог</p>
+            <h3>Каталог</h3>
             <ul>
                 <li><a href="#">Полупроводници</a></li>
                 <li><a href="#">Оптоелектроника</a></li>
@@ -53,7 +65,9 @@
                 <li><a href="#">Оборудване</a></li>
                 <li><a href="#">Роботика</a></li>
                 <li><a href="#">Други</a></li>
+                <li><img src="aside.jpg" alt="aside" width="160"/></li>
             </ul>
+
         </nav>
     </aside>
     <main>
@@ -98,9 +112,15 @@
             </p>
         </article>
     </main>
-
-    <footer class="sectionFooter"></footer>
-
+    <footer>
+        <a href="#">За нас</a>
+        <a href="#">Пишете ни</a>
+        <a href="#">Условия за ползване</a>
+        <a href="#">Нашата политика</a>
+        <a href="#">Адрес и телефон</a>
+        <a href="#">Харесайте ни във Facebook</a>
+    </footer>
 </div>
+
 </body>
 </html>
