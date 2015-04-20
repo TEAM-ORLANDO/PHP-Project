@@ -65,7 +65,7 @@
                 <li id="category15"><a href="#">Оборудване</a></li>
                 <li id="category16"><a href="#">Роботика</a></li>
                 <li id="category17"><a href="#">Други</a></li>
-                <li><img src="aside.jpg" alt="aside" width="160"/></li>
+                <li><img src="aside.png" alt="aside" width="160"/></li>
             </ul>
 
         </nav>
