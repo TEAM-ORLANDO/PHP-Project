@@ -35,7 +35,7 @@
         </form>";
 
         ?>
-        <div id="logo"><img src="logo.png" alt="logo" width="200px"></div>
+        <div id="logo"><img src="img/logo.png" alt="logo" width="200px"></div>
         <h1>Електроника за всеки любител</h1>
         <nav id="main-nav">
             <a href="#">Начало</a>
@@ -66,7 +66,7 @@
                 <li id="category16"><a href="#">Роботика</a></li>
                 <li id="category17"><a href="#">Други</a></li>
             </ul>
-            <img src="aside.png" alt="aside" width="160"/>
+            <img src="img/aside.png" alt="aside" width="160"/>
 
         </nav>
     </aside>
