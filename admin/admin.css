@@ -1,0 +1,56 @@
+body {
+    width: 900px;
+    margin: 100px auto;
+}
+#info {
+    float: left;
+}
+#categories {
+    float: right;
+}
+#title {
+    height: 20px;
+    width: 600px;
+}
+div.upload {
+    width: 90px;
+    height: 33px;
+    background: url("upload.png")
+}
+#img   {
+    display: block;
+    width: 90px;
+    height: 33px;
+    opacity: 0;
+}
+
+div {
+    margin-bottom: 10px;
+}
+textarea {
+    width: 600px;
+    height: 500px;
+}
+#buttons {
+    float: right;
+}
+#cancel {
+    background-color: #ffffff;
+    border: 1px solid lightgray;
+    padding: 10px 20px;
+}
+#publish {
+    background-color: royalblue;
+    color: #ffffff;
+    border: 1px solid lightgray;
+    padding: 10px 20px;
+}
+#publish:hover {
+    opacity: 0.9;
+    transition: 1s;
+}
+
+select {
+    width: 200px;
+    height: 590px;
+}
