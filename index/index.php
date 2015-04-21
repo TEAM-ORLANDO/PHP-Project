@@ -12,25 +12,33 @@
         //logged in or not field
 
         echo "<form id='login' action='login.php' method='post' accept-charset='UTF-8'>
-            <div class='divLabel'>
-                <label for='username'>Потребител:</label>
-                    <div>
-                        <input type='text' name='username' id='username' maxlength='50'/>
+            <div id='userPass'>
+                    <div >
+                        <label for='username'>Потребител:</label>
+                        <div>
+                            <input type='text' name='username' id='username' maxlength='50'/>
+                        </div>
                     </div>
+
+                    <div>
+                        <label for='password'>Парола:</label>
+                        <div>
+                            <input type='password' name='password' id='password' maxlength='50'/>
+                        </div>
+                     </div>
             </div>
 
-            <div class='divLabel'>
-                <label for='password'>Парола:</label>
-                    <div>
-                        <input type='password' name='password' id='password' maxlength='50'/>
-                    </div>
-            </div>
-            <div class='divLabel'>
-                <input type='submit' name='register' value='Регистрация'/>
-            </div>
-            <div>
+            <div id='submit'>
+                <div>
+                    <input type='submit' name='register' value='Регистрация'/>
+                </div>
+
+                <div>
                 <input type='submit' name='submit' value='Вход'/>
+                </div>
+
             </div>
+
 
         </form>";
 
