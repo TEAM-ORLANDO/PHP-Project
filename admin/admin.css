@@ -5,18 +5,35 @@ body {
 #info {
     float: left;
 }
-#categories {
-    float: right;
-}
+
 #title {
-    height: 20px;
+    height: 30px;
     width: 600px;
+    font-size: 20px;
+    box-shadow: 0 0 5px lightgray;
+    border: 1px solid lightgray;
 }
 div.upload {
+    position: relative;
     width: 90px;
     height: 33px;
-    background: url("upload.png")
+    /*background: url("upload.png")*/
+    border: 1px solid lightgray;
+    background-color: royalblue;
+    box-shadow: 0 0 5px lightgray;
 }
+div.upload:before {
+    content: 'Upload';
+    color: #ffffff;
+    position: absolute;
+    top: 8px;
+    left: 20px;
+}
+div.upload:hover {
+    opacity: 0.9;
+    transition: 1s;
+}
+
 #img   {
     display: block;
     width: 90px;
@@ -30,6 +47,8 @@ div {
 textarea {
     width: 600px;
     height: 500px;
+    box-shadow: 0 0 5px lightgray;
+    border: 1px solid lightgray;
 }
 #buttons {
     float: right;
@@ -38,19 +57,26 @@ textarea {
     background-color: #ffffff;
     border: 1px solid lightgray;
     padding: 10px 20px;
+    box-shadow: 0 0 5px lightgray;
 }
 #publish {
     background-color: royalblue;
     color: #ffffff;
     border: 1px solid lightgray;
     padding: 10px 20px;
+    box-shadow: 0 0 5px lightgray;
 }
 #publish:hover {
     opacity: 0.9;
     transition: 1s;
 }
-
+#categories {
+    float: right;
+}
 select {
     width: 200px;
     height: 590px;
+    box-shadow: 0 0 5px lightgray;
+    border: 1px solid lightgray;
+    overflow:hidden;
 }

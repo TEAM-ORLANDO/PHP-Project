@@ -7,7 +7,7 @@
 </head>
 <body>
 <form action="#" method="post">
-    <div id="info">
+    <main id="info">
         <div>
             <input type="text" name="title" id="title"/>
         </div>
@@ -16,16 +16,15 @@
 
         </div>
         <div>
-            <textarea name="text" id="text" ></textarea>
+            <textarea name="file" id="text" ></textarea>
         </div>
         <div id="buttons">
             <input type="submit" name="submit" value="Cancel" id="cancel">
             <input type="submit" name="submit" value="Publish" id="publish">
         </div>
+    </main>
 
-    </div>
-
-    <div id="categories">
+    <aside id="categories">
         <select name="products" multiple="multiple" >
             <option value="category1">Полупроводници</option>
             <option value="category2">Оптоелектроника</option>
@@ -33,8 +32,7 @@
             <option value="category4">Конектори</option>
             <option value="category5">...</option>
         </select>
-
-    </div>
+    </aside>
 
 </form>
 </body>
