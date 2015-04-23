@@ -32,14 +32,23 @@
 
             <aside id="categories">
                 <h2>Категории</h2>
-                <select name="products" multiple="multiple" >
-                    <option value="Други" selected>Други</option>
-                    <option value="Полупроводници">Полупроводници</option>
-                    <option value="Оптоелектроника">Оптоелектроника</option>
-                    <option value="Пасивни_елементи">Пасивни елементи</option>
-                    <option value="Конектори">Конектори</option>
-                    <option value="category5">...</option>
-                </select>
+                <div>
+                    <p><input type="radio" name="products" value="Други" checked/>Други</p>
+                    <p><input type="radio" name="products" value="Полупроводници"/>Полупроводници</p>
+                    <p><input type="radio" name="products" value="Оптоелектроника"/>Оптоелектроника</p>
+                    <p><input type="radio" name="products" value="Пасивни елементи"/>Пасивни елементи</p>
+                    <p><input type="radio" name="products" value="Конектори"/>Конектори</p>
+                    <p><input type="radio" name="products" value="Предпазители"/>Предпазители</p>
+                    <p><input type="radio" name="products" value="Превключватели"/>Превключватели</p>
+                    <p><input type="radio" name="products" value="Източници на звук"/>Източници на звук</p>
+                    <p><input type="radio" name="products" value="Релета"/>Релета</p>
+                    <p><input type="radio" name="products" value="Охлаждане, отопление"/>Охлаждане, отопление</p>
+                    <p><input type="radio" name="products" value="Механични елементи"/>Механични елементи</p>
+                    <p><input type="radio" name="products" value="Кутии"/>Кутии</p>
+                    <p><input type="radio" name="products" value="Автоматика"/>Автоматика</p>
+                    <p><input type="radio" name="products" value="Оборудване"/>Оборудване</p>
+                    <p><input type="radio" name="products" value="Роботика"/>Роботика</p>
+                </div>
             </aside>
         </form>
     </div>
