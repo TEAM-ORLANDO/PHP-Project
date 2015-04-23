@@ -2,15 +2,8 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-
     <title>Електроника за всеки любител</title>
-    
-    <meta name="robots" content="index, follow">
-    <link rel="stylesheet" type="text/css" href="css/aciTree.css" media="all">
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery.aciPlugin.min.js"></script>
-    <script type="text/javascript" src="js/jquery.aciTree.min.js"></script>
-    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="index.css"/>
 </head>
 <body>
 <div id="container">
@@ -61,63 +54,26 @@
 
     <aside id="left-side">
         <nav>
-
-
-            <div id="tree" class="aciTree"><div>
-                    <br>Products:</div></div>
-
-
-            <script class="code" type="text/javascript">
-
-                $(function() {
-
-                    // listen for the events
-                    $('#tree').on('acitree', function(event, api, item, eventName, options) {
-                        if (eventName == 'selected'){
-                            // do something when a item is selected
-                            var itemData = api.itemData(item);
-                            alert('You just selected the item with the ID: ' + api.getId(item) + '\n' +
-                                'also the custom property [my-url] equals: ' + itemData['my-url']);
-                        }
-                    });
-
-                    // init the tree
-                    $('#tree').aciTree({
-                        ajax: {
-                            url: 'json/sample.json'
-                        },
-                        selectable: true
-                    });
-
-                });
-
-            </script>
-
-            <script type="text/javascript">
-
-                $(function() {
-
-                    var log = $('.log div');
-
-                    // write to log
-                    $('#tree').on('acitree', function(event, api, item, eventName, options) {
-                        if (api.isItem(item)) {
-                            log.prepend('<p>' + eventName + ' [' + api.getId(item) + ']</p>');
-                        } else {
-                            log.prepend('<p>' + eventName + ' [tree]</p>');
-                        }
-                    });
-
-                    $('.clear_log').click(function() {
-                        $('.log div').html('');
-                        return false;
-                    });
-
-                });
-
-            </script>
-
-
+            <h3>Каталог</h3>
+            <ul>
+                <li id="category1"><a href="categories/poluprovodnitsi.php">Полупроводници</a></li>
+                <li id="category2"><a href="#">Оптоелектроника</a></li>
+                <li id="category3"><a href="#">Пасивни елементи</a></li>
+                <li id="category4"><a href="#">Конектори</a></li>
+                <li id="category5"><a href="#">Предпазители</a></li>
+                <li id="category6"><a href="#">Превключватели</a></li>
+                <li id="category7"><a href="#">Източници на звук</a></li>
+                <li id="category8"><a href="#" >Релета</a></li>
+                <li id="category9"><a href="#">Трансформатори</a></li>
+                <li id="category10"><a href="#">Охлаждане, отопление</a></li>
+                <li id="category11"><a href="#">Проводници</a></li>
+                <li id="category12"><a href="#">Механични елементи</a></li>
+                <li id="category13"><a href="#">Кутии</a></li>
+                <li id="category14"><a href="#">Автоматика</a></li>
+                <li id="category15"><a href="#">Оборудване</a></li>
+                <li id="category16"><a href="#">Роботика</a></li>
+                <li id="category17"><a href="categories/drugi.php">Други</a></li>
+            </ul>
             <img src="img/aside.png" alt="aside" width="160"/>
 
         </nav>
