@@ -1,8 +1,23 @@
 body {
     width: 900px;
+    margin: 0 auto;
+    font-family: Calibri, serif;
+}
+body > header {
+    border: 1px solid darkgray;
+    box-shadow: 0 0 5px lightgray;
+    padding: 5px;
+}
+
+body > header > a {
+    text-decoration: none;
+    color: #808080;
+
+}
+#container {
     margin: 100px auto;
 }
-#info {
+#container > form > main {
     float: left;
 }
 
@@ -13,28 +28,28 @@ body {
     box-shadow: 0 0 5px lightgray;
     border: 1px solid lightgray;
 }
-div.upload {
+nav.upload {
+    margin: 10px 0;
     position: relative;
     width: 90px;
     height: 33px;
-    /*background: url("upload.png")*/
     border: 1px solid lightgray;
     background-color: royalblue;
     box-shadow: 0 0 5px lightgray;
 }
-div.upload:before {
-    content: 'Upload';
+nav.upload:before {
+    content: 'Медиа';
     color: #ffffff;
     position: absolute;
     top: 8px;
     left: 20px;
 }
-div.upload:hover {
+nav.upload:hover {
     opacity: 0.9;
     transition: 1s;
 }
 
-#img   {
+#upload   {
     display: block;
     width: 90px;
     height: 33px;
@@ -73,7 +88,13 @@ textarea {
 #categories {
     float: right;
 }
-select {
+h2 {
+    margin-top: 0;
+    font-weight: normal;
+    font-size: 20px;
+    color: darkgray;
+}
+#categories > select {
     width: 200px;
     height: 590px;
     box-shadow: 0 0 5px lightgray;
