@@ -43,10 +43,10 @@
         </form>";
 
         ?>
-        <div id="logo"><img src="../img/logo.png" alt="logo" width="200px"></div>
+        <div id="logo"><a href="../index.php"><img src="../img/logo.png" alt="logo" width="200px"></a></div>
         <h1>Електроника за всеки любител</h1>
         <nav id="main-nav">
-            <a href="#">Начало</a>
+            <a href="../index.php">Начало</a>
             <a href="#">Каталог</a>
             <a href="#">Контакти</a>
         </nav>
