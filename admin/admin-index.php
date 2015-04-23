@@ -34,10 +34,10 @@
                 <h2>Категории</h2>
                 <select name="products" multiple="multiple" >
                     <option value="Други" selected>Други</option>
-                    <option value="category1">Полупроводници</option>
-                    <option value="category2">Оптоелектроника</option>
-                    <option value="category3">Пасивни елементи</option>
-                    <option value="category4">Конектори</option>
+                    <option value="Полупроводници">Полупроводници</option>
+                    <option value="Оптоелектроника">Оптоелектроника</option>
+                    <option value="Пасивни_елементи">Пасивни елементи</option>
+                    <option value="Конектори">Конектори</option>
                     <option value="category5">...</option>
                 </select>
             </aside>

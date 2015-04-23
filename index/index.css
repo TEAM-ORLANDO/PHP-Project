@@ -99,11 +99,11 @@ aside {
     float: left;
     border: 1px solid lightgray;
     border-top: none;
-    border-right: none;
     border-radius: 0 0 0 5px;
     width: 200px;
     height: 910px;
     position: relative;
+    margin-bottom: 10px;
 }
 
 
@@ -267,14 +267,13 @@ aside > nav > ul > #category17:hover {
 aside > nav > img {
     position: absolute;
     top:709px;
-    left: 43px;
+    left: 40px;
 }
 
 main {
     width: 915px;
     float: right;
     border-top: 1px solid lightgray;
-    border-left: 1px solid lightgray;
     margin-bottom: 10px;
 
 }

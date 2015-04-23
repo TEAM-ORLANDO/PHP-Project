@@ -56,7 +56,7 @@
         <nav>
             <h3>Каталог</h3>
             <ul>
-                <li id="category1"><a href="#">Полупроводници</a></li>
+                <li id="category1"><a href="categories/poluprovodnitsi.php">Полупроводници</a></li>
                 <li id="category2"><a href="#">Оптоелектроника</a></li>
                 <li id="category3"><a href="#">Пасивни елементи</a></li>
                 <li id="category4"><a href="#">Конектори</a></li>
@@ -72,7 +72,7 @@
                 <li id="category14"><a href="#">Автоматика</a></li>
                 <li id="category15"><a href="#">Оборудване</a></li>
                 <li id="category16"><a href="#">Роботика</a></li>
-                <li id="category17"><a href="#">Други</a></li>
+                <li id="category17"><a href="categories/drugi.php">Други</a></li>
             </ul>
             <img src="img/aside.png" alt="aside" width="160"/>
 

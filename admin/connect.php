@@ -13,6 +13,7 @@ if ($mysqli->connect_error) {
 if(isset($_POST['submit'])){
     $title = $_POST['title'];
     $text = $_POST['file'];
+    $category = $_POST['products'];
 
 
 //    $query = "SELECT * FROM `new-article`";
@@ -25,7 +26,7 @@ if(isset($_POST['submit'])){
 //        var_dump($text);
 //
 //    }
-    $query = "INSERT INTO new_article (title, text) VALUES ('$title', '$text')";
+    $query = "INSERT INTO new_article (title, text, category) VALUES ('$title', '$text', '$category')";
     if($mysqli->query($query) === TRUE){
         echo "Great work!";
     } else {
@@ -33,8 +34,5 @@ if(isset($_POST['submit'])){
         echo "Error";
     }
 }
-//else {
-//    header('Location: admin-index.php');
-//}
 
 
