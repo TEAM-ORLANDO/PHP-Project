@@ -15,20 +15,9 @@ if(isset($_POST['submit'])){
     $text = $_POST['file'];
     $category = $_POST['products'];
 
-
-//    $query = "SELECT * FROM `new-article`";
-//    $result = $mysqli->query($query);
-//
-//    if ($row = $result->fetch_assoc()){
-//        $title = $row['title'];
-//        var_dump($title);
-//        $text = $row['text'];
-//        var_dump($text);
-//
-//    }
     $query = "INSERT INTO new_article (title, text, category) VALUES ('$title', '$text', '$category')";
     if($mysqli->query($query) === TRUE){
-        echo "Great work!";
+        header("Location: ../index/index.php");
     } else {
         echo $mysqli->error;
         echo "Error";
