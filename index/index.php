@@ -155,14 +155,6 @@
                 quod ratione tempora. Eligendi, quia.
             </p>
         </article>
-        <article>
-            <h2>Поле за промоция</h2>
-
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet delectus laboriosam modi quasi quo
-                quod ratione tempora. Eligendi, quia.
-            </p>
-        </article>
     </main>
     <footer>
         <a href="#">За нас</a>
