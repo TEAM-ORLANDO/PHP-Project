@@ -11,13 +11,10 @@ if ($conn -> connect_error) {
     die("Connection failed: " . $conn -> connect_error);
 }
 include 'header.php';
-echo "<main><form id='register' action='login.php' method='post' accept-charset='UTF-8'>
-    <p>Регистрация на нов потребител</p>
-
-    <label for='name'>Снимка</label>
-    <input type='file' name='pic' id='pic'/>
-    <div><img src='#' alt='User picture'</div>
-<br><br>
+echo "<main><p>Регистрация на нов потребител</p>
+<form action='login.php' method='post' enctype='multipart/form-data' accept-charset='UTF-8'>
+    Select image to upload:
+    <input type='file' name='fileToUpload' id='fileToUpload'><br><br>    
     <label for='name'>Име:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
     <input type='text' name='name' id='name' required/>
 <br><br>
@@ -48,6 +45,7 @@ if (isset($_POST['name']) && isset($_POST['username']) && isset($_POST['family-n
     $pword2 = $_POST['password2'];
     $email = $_POST['email'];
     $uLength = strlen($uname);
+
     //validate first name
     if (preg_match('/[A-Za-z]+/', $firstname)) {
         $validName = TRUE;
@@ -55,7 +53,7 @@ if (isset($_POST['name']) && isset($_POST['username']) && isset($_POST['family-n
         echo "Вашето име трябва да съдържа поне един символ!<BR>";
         echo "<br>";
     }
-//validate family name
+    //validate family name
     if (preg_match('/[A-Za-z]+/', $familyname)) {
         $validFamilyName = TRUE;
     } else {
@@ -76,7 +74,7 @@ if (isset($_POST['name']) && isset($_POST['username']) && isset($_POST['family-n
         }
     } else {
         echo "Невалидна парола. Моля опитайте отново!<BR>";
-        
+
     }
     //validate email
     if (preg_match('/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/', $email)) {
@@ -84,14 +82,58 @@ if (isset($_POST['name']) && isset($_POST['username']) && isset($_POST['family-n
     } else {
         echo " Невалиден email адрес. Моля опитайте отново!<br>";
     }
+
+    $pic=($_FILES['fileToUpload']['name']); 
+    $currentdir = getcwd();
+    $target_dir = $currentdir . '/uploads/';
+    $target_file = $target_dir . basename($_FILES['fileToUpload']['name']);
+    $uploadOk = 1;
+    $imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
+    // Check if image file is a actual image or fake image
+    if (isset($_POST["submit"])) {
+        $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+        if ($check !== false) {
+            echo "File is an image - " . $check["mime"] . ".";
+            $uploadOk = 1;
+        } else {
+            echo "File is not an image.";
+            $uploadOk = 0;
+        }
+    }
+    if (file_exists($target_file)) {
+        echo "Sorry, file already exists.";
+        $uploadOk = 0;
+    }
+    // Check file size
+    if ($_FILES["fileToUpload"]["size"] > 500000) {
+        echo "Sorry, your file is too large.";
+        $uploadOk = 0;
+    }
+    // Allow certain file formats
+    if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif") {
+        echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+        $uploadOk = 0;
+    }
+    // Check if $uploadOk is set to 0 by an error
+    if ($uploadOk == 0) {
+        echo "Sorry, your file was not uploaded.";
+        // if everything is ok, try to upload file
+    } else {
+        if (move_uploaded_file($_FILES['fileToUpload']['tmp_name'], $target_file)) {
+            echo "The file " . basename($_FILES["fileToUpload"]["name"]) . " has been uploaded.";
+        } else {
+            echo "Sorry, there was an error uploading your file.";
+        }
+    }
+
     if ($validName && $validFamilyName && $validUserName && $validPassword && $validMail) {
 
         $uname = htmlspecialchars($uname);
         $familyname = htmlspecialchars($familyname);
         $pword = md5($pword);
         $email = mysql_real_escape_string($email);
-        $sql = "INSERT INTO userprofiles (fname, lname, username, password, email)
-        VALUES ('$firstname', '$familyname', '$uname', '$pword', '$email')";
+        $sql = "INSERT INTO userprofiles (fname, lname, username, password, email, picture)
+        VALUES ('$firstname', '$familyname', '$uname', '$pword', '$email', '$pic')";
 
         if ($conn -> query($sql) === TRUE) {
             echo "New record created successfully";
