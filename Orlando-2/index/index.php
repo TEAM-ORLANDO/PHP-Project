@@ -144,46 +144,75 @@
 				</nav>
 			</aside>
 			<main>
-				<article>
-					<h2>Поле за промоция</h2>
 
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet delectus laboriosam modi quasi quo
-						quod ratione tempora. Eligendi, quia.
-					</p>
-				</article>
-				<article>
-					<h2>Поле за новина</h2>
+                <?php
+                $servername = "localhost";
+                $username = "root";
+                $password = "";
+                $dbname = "admin_article";
+                $mysqli = new mysqli($servername, $username, $password, $dbname);
+                $mysqli->set_charset("UTF8");
 
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet delectus laboriosam modi quasi quo
-						quod ratione tempora. Eligendi, quia.
-					</p>
-				</article>
-				<article>
-					<h2>Поле за промоция</h2>
-
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet delectus laboriosam modi quasi quo
-						quod ratione tempora. Eligendi, quia.
-					</p>
-				</article>
-				<article>
-					<h2>Поле за новина</h2>
-
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet delectus laboriosam modi quasi quo
-						quod ratione tempora. Eligendi, quia.
-					</p>
-				</article>
-				<article>
-					<h2>Поле за промоция</h2>
-
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet delectus laboriosam modi quasi quo
-						quod ratione tempora. Eligendi, quia.
-					</p>
-				</article>
+                if ($mysqli->connect_error) {
+                    die ("Failed to connect (" . $mysqli->connect_errno . ") " . $mysqli->connect_error);
+                }
+                $query = "SELECT id, title, text, category FROM `new_article`";
+                $result = $mysqli->query($query);
+                while ($article = $result->fetch_assoc()){
+                    $title = $article['title'];
+                    $text = $article['text'];
+                    $category = $article['category'];
+                    if($category === 'Главна'){ ?>
+                        <article>
+                            <h2><?php echo $title ?></h2>
+                            <p><?php echo $text ?></p>
+                        </article>
+                    <?php
+                    }
+                    ?>
+                <?php
+                }
+                ?>
+<!--				<article>-->
+<!--					<h2>Поле за промоция</h2>-->
+<!---->
+<!--					<p>-->
+<!--						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet delectus laboriosam modi quasi quo-->
+<!--						quod ratione tempora. Eligendi, quia.-->
+<!--					</p>-->
+<!--				</article>-->
+<!--				<article>-->
+<!--					<h2>Поле за новина</h2>-->
+<!---->
+<!--					<p>-->
+<!--						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet delectus laboriosam modi quasi quo-->
+<!--						quod ratione tempora. Eligendi, quia.-->
+<!--					</p>-->
+<!--				</article>-->
+<!--				<article>-->
+<!--					<h2>Поле за промоция</h2>-->
+<!---->
+<!--					<p>-->
+<!--						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet delectus laboriosam modi quasi quo-->
+<!--						quod ratione tempora. Eligendi, quia.-->
+<!--					</p>-->
+<!--				</article>-->
+<!--				<article>-->
+<!--					<h2>Поле за новина</h2>-->
+<!---->
+<!--					<p>-->
+<!--						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet delectus laboriosam modi quasi quo-->
+<!--						quod ratione tempora. Eligendi, quia.-->
+<!--					</p>-->
+<!--				</article>-->
+<!--				<article>-->
+<!--					<h2>Поле за промоция</h2>-->
+<!---->
+<!--					<p>-->
+<!--						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet delectus laboriosam modi quasi quo-->
+<!--						quod ratione tempora. Eligendi, quia.-->
+<!--					</p>-->
+<!--				</article>-->
 			</main>
 			<footer>
 				<a href="#">За нас</a>

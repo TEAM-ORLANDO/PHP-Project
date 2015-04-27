@@ -44,7 +44,7 @@
     <form action='login.php' method='post' enctype='multipart/form-data' accept-charset='UTF-8'>
         <a href="../index/index.php">Електроника за всеки любител</a>
         <h3>Регистрация на нов потребител</h3>
-        Select image to upload:
+        Изберете снимка:
         <input type='file' name='fileToUpload' id='fileToUpload'><br><br>
         <div>
 
