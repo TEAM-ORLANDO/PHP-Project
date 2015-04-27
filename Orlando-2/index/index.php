@@ -13,6 +13,31 @@
 		<link rel="stylesheet" href="css/index.css"/>
 	</head>
 	<body>
+        <?php
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $dbname = "useracount";
+
+        // Create connection
+        $conn = new mysqli($servername, $username, $password, $dbname);
+        // Check connection
+        if ($conn -> connect_error) {
+            die("Connection failed: " . $conn -> connect_error);
+        }
+        if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['submit'])) {
+            if($_POST['username'] !="" && $_POST['password'] !=""){
+                $username = $_POST['username'];
+                $password = md5($_POST['password']);
+                $user_get = mysqli_query($conn, "SELECT fname FROM userprofiles WHERE username='$username' AND password='$password'");
+                $name = mysqli_fetch_array($user_get);
+                echo "<div>Здравей, " . $name['fname'] . "</div>";
+            }else{
+                echo "Моля, регистрирайте се.";
+            }
+        }
+        $conn -> close();
+        ?>
 		<div id="container">
 			<header>
 			
@@ -23,59 +48,32 @@
 				<h1>Електроника за всеки любител</h1>
 				    <?php //logged in or not field
 
+                    echo"<form id='register' action='login.php' method='post' accept-charset='UTF-8'><div>
+                        <input type='submit' name='register' value='Регистрация' id='registerBtn'/>
+                    </div></form>";
+
                 echo "<form id='login' action='index.php' method='post' accept-charset='UTF-8'>
-            <div id='userPass'>
-                    <div >
-                        <label for='username'>Потребител:</label>
-                        <div>
-                            <input type='text' name='username' id='username' maxlength='50'/>
+                <div id='userPass'>
+                        <div >
+                            <label for='username'>Потребител:</label>
+                            <div>
+                                <input type='text' name='username' id='username' maxlength='50'/>
+                            </div>
                         </div>
-                    </div>
 
-                    <div>
-                        <label for='password'>Парола:</label>
                         <div>
-                            <input type='password' name='password' id='password' maxlength='50'/>
+                            <label for='password'>Парола:</label>
+                            <div>
+                                <input type='password' name='password' id='password' maxlength='50'/>
+                            </div>
+                         </div>
+                        <div id='submit'>
+                            <div>
+                                <input type='submit' name='submit' value='Вход'/>
+                            </div>
                         </div>
-                     </div>
-            </div>
-
-            <div id='submit'>
-                
-                <div>
-                <input type='submit' name='submit' value='Вход'/>
                 </div>
-
-            </div>
-
-
-        </form>";
-                $servername = "localhost";
-                $username = "root";
-                $password = "Berlin31";
-                $dbname = "useracount";
-
-                // Create connection
-                $conn = new mysqli($servername, $username, $password, $dbname);
-                // Check connection
-                if ($conn -> connect_error) {
-                    die("Connection failed: " . $conn -> connect_error);
-                }
-                if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['submit'])) {
-                    if($_POST['username'] !="" && $_POST['password'] !=""){
-                        $username = $_POST['username'];
-                    $password = md5($_POST['password']); 
-                    $user_get = mysqli_query($conn, "SELECT fname FROM userprofiles WHERE username='$username' AND password='$password'");
-                    $name = mysqli_fetch_array($user_get);
-                    echo "<div>Здравей, " . $name['fname'] . "</div>";
-                    }else{
-                        echo "You are not registerd!";
-                    }
-                }
-                $conn -> close();
-                echo"<form id='register' action='login.php' method='post' accept-charset='UTF-8'><div>
-                    <input type='submit' name='register' value='Регистрация'/>
-                </div></form>";
+                </form>";
                 ?>
 				<nav id="main-nav">
 					<a href="index.php">Начало</a>

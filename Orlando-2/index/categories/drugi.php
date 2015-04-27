@@ -91,7 +91,6 @@
             if ($mysqli->connect_error) {
                 die ("Failed to connect (" . $mysqli->connect_errno . ") " . $mysqli->connect_error);
             }
-
             $query = "SELECT id, title, text, category FROM `new_article`";
             $result = $mysqli->query($query);
             while ($article = $result->fetch_assoc()){

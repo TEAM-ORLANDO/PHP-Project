@@ -7,7 +7,7 @@
     <title>Администратор</title>
     <link rel="stylesheet" href="admin.css"/>
 </head>
-<body>
+    <body>
     <header>
         <a href="../index/index.php">Електроника за всеки любител</a>
     </header>
