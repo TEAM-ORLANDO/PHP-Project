@@ -69,7 +69,7 @@
                             $name = mysqli_fetch_array($user_get);
                             echo "<div>Здравей, " . $name['fname'] . "</div>";
                         } else {
-                            echo "You are not registerd!";
+                            echo "You are not registered!";
                         }
                     }
 
