@@ -160,15 +160,19 @@
                 if ($mysqli->connect_error) {
                     die ("Failed to connect (" . $mysqli->connect_errno . ") " . $mysqli->connect_error);
                 }
-                $query = "SELECT id, title, text, category FROM `new_article`";
+                $query = "SELECT id, title, text, category, name, image FROM `new_article`";
                 $result = $mysqli->query($query);
                 while ($article = $result->fetch_assoc()){
                     $title = $article['title'];
                     $text = $article['text'];
                     $category = $article['category'];
-                    if($category === 'Главна'){ ?>
+                    $image = $article['image'];
+                    $id = $article['id'];
+
+                    if($category === 'Главна'){?>
                         <article>
                             <h2><?php echo $title ?></h2>
+                            <p><?php echo "<img style='height: 110px; float: left; margin-right: 10px;' src='displayImage.php?id=$id'/>"; ?></p>
                             <p><?php echo $text ?></p>
                         </article>
                     <?php
