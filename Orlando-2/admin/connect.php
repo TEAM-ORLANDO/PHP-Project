@@ -15,7 +15,13 @@ if(isset($_POST['submit'])){
     $text = $_POST['file'];
     $category = $_POST['products'];
 
-    $query = "INSERT INTO new_article (title, text, category) VALUES ('$title', '$text', '$category')";
+    $file = $_FILES['image']['tmp_name'];
+    $image = addslashes(file_get_contents($file));
+    $image_name = addslashes($_FILES['image']['name']);
+    $image_size = getimagesize($_FILES['image']['tmp_name']);
+
+    $query = "INSERT INTO new_article (title, text, category, name, image)
+              VALUES ('$title', '$text', '$category', '$image_name', '$image')";
     if($mysqli->query($query) === TRUE){
         header("Location: ../index/index.php");
     } else {

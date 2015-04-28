@@ -11,18 +11,18 @@
     <header>
         <a href="../index/index.php">Електроника за всеки любител</a>
     </header>
-
     <div id="container">
-        <form action="connect.php" method="post">
+        <form action="connect.php" method="post" enctype="multipart/form-data">
             <main>
                 <header>
                     <input type="text" name="title" id="title"/>
                 </header>
-                <nav class="upload">
-                    <input type="file" name="upload" id="upload">
-                </nav>
+                        <nav class="upload">
+                            <input type="file" name="image" id="upload">
+                        </nav>
+
                 <article>
-                    <textarea name="file" id="text" ></textarea>
+                    <textarea name="file" id="text"></textarea>
                 </article>
                 <div id="buttons">
                     <input type="reset" name="reset" value="Отмени" id="cancel">
@@ -33,7 +33,8 @@
             <aside id="categories">
                 <h2>Категории</h2>
                 <div>
-                    <p><input type="radio" name="products" value="Други" checked/>Други</p>
+                    <p><input type="radio" name="products" value="Главна" checked/>Главна</p>
+                    <p><input type="radio" name="products" value="Други"/>Други</p>
                     <p><input type="radio" name="products" value="Полупроводници"/>Полупроводници</p>
                     <p><input type="radio" name="products" value="Оптоелектроника"/>Оптоелектроника</p>
                     <p><input type="radio" name="products" value="Пасивни елементи"/>Пасивни елементи</p>
